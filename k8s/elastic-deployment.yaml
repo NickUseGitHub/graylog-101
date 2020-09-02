@@ -29,15 +29,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  creationTimestamp: null
   labels:
     service: elasticsearch
   name: elasticsearch
 spec:
-  clusterIP: None
+  type: ClusterIP
   ports:
-  - name: headless
-    port: 55555
-    targetPort: 0
+  - name: es-port
+    port: 9200
+    targetPort: 9200
   selector:
     app: elasticsearch
