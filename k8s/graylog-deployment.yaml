@@ -37,15 +37,15 @@ spec:
       service: graylog
     name: graylog
   spec:
-    type: NodePort
+    type: LoadBalancer
     ports:
     - name: "9000"
       port: 9000
       targetPort: 9000
-      nodePort: 30003
+      # nodePort: 30003
     - name: "12201"
       port: 12201
       targetPort: 12201
-      nodePort: 30004
+      # nodePort: 30004
     selector:
       app: graylog
