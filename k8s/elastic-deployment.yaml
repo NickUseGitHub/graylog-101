@@ -18,11 +18,11 @@ spec:
       - name: elasticsearch
         image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.8.10
         ports:
-        - containerPort: 80
+        - containerPort: 9200
         env:
-          - name: "http.host"
+          - name: http.host
             value: 0.0.0.0
-          - name: "ES_JAVA_OPTS"
+          - name: ES_JAVA_OPTS
             value: "-Xms512m -Xmx512m"
 
 ---
