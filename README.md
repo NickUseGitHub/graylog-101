@@ -19,3 +19,9 @@
 ```
 minikube tunnel --cleanup
 ```
+
+## To test send log into graylog 
+
+```
+curl -XPOST http://localhost:12201/gelf -p0 -d '{"short_message":"Hello there", "host":"alpine-k8s.org", "facility":"test", "_foo":"bar"}';
+```
