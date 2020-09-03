@@ -23,7 +23,7 @@ spec:
         - containerPort: 12201
         env:
           - name: GRAYLOG_HTTP_EXTERNAL_URI
-            value: http://127.0.0.1:9000/
+            value: http://www.graylog.local:9000/
           - name: GRAYLOG_ELASTICSEARCH_HOSTS
             value: http://elasticsearch:9200
           - name: GRAYLOG_MONGODB_URI
